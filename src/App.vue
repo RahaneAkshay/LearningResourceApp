@@ -1,11 +1,5 @@
 <template>
-<learning-resource></learning-resource>
-    <ul v-for="(item,index) in storedResources" :key="index">
-        <li >{{item.id}}</li>
-         <li >{{item.title}}</li>
-          <li >{{item.description}}</li>
-           <li >{{item.link}}</li>
-    </ul>
+<learning-resource :stored-resources="storedResources"></learning-resource>
 </template>
 <script>
 import LearningResource from './components/learning-resources/LearningResource.vue'
