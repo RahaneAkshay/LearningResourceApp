@@ -1,4 +1,5 @@
 <template>
+<learning-resource></learning-resource>
     <ul v-for="(item,index) in storedResources" :key="index">
         <li >{{item.id}}</li>
          <li >{{item.title}}</li>
@@ -7,7 +8,11 @@
     </ul>
 </template>
 <script>
+import LearningResource from './components/learning-resources/LearningResource.vue'
 export default {
+    components:{
+        'learning-resource':LearningResource
+    },
     data(){
         return{
             storedResources:[{
